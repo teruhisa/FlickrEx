@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Flickrex by teruhisa</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Flickrex</h1>
+        <p>Flickr Extender</p>
+
+        <p class="view"><a href="https://github.com/teruhisa/FlickrEx">View the Project on GitHub <small>teruhisa/FlickrEx</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/teruhisa/FlickrEx/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/teruhisa/FlickrEx/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/teruhisa/FlickrEx">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>FlickrEx</h1>
+
+<p>FlickrEx is a JavaScript library making it possible easily to add additional information onto your flickr images submitted in your blog articles and web site. Just copy &amp; paste HTML code below in your blog/web site and it works magically.</p>
+
+<p>I'm considering FlickrEx should be pluggable and used with the features you just need. Currenlty, you can use only ExifEx, which will add Exif information to your Flickr images.</p>
+
+<h2>Usage</h2>
+
+<p>You can just copy &amp; paste HTML code below in your blog/web site and it should work.</p>
+
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+    <span class="c1">//var FLICKREX_API_KEY = "18c9f79a96fd34c3b3f16a93fb0a5d3c";</span>
+    <span class="c1">//var FLICKREX_EXIF_FORMAT = "%camera% / %Focal Length% / f/%aperture% / ISO %ISO Speed% / %Exposure% sec / %Exposure Bias% EV / %Software%";</span>
+    <span class="c1">//var FLICKREX_EXIF_JQUERY_SELECTOR = "#content img";</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//github.com/drikin/FlickrEx/raw/stable/flickrex.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//github.com/drikin/FlickrEx/raw/stable/exifex.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<p>NOTE: Seemingly, this code is using global variables. However, inside FlickrEx javascript code, these variables' namescope is correctly modified, so that these global variables won't violate other stuff at all. It makes the snippet code more clean.</p>
+
+<h2>Customize ExifEx configuration</h2>
+
+<p>You can easily customize Exif information added to each Flickr image by modifying FLICKR_EXIF_FORMAT parameter in the snippet code above.
+The keywords below, like the format %Label% will be replaced with the actual Exif data of each Flickr image.</p>
+
+<h3>Keywords for ExifEx</h3>
+
+<ul>
+<li>%camera%</li>
+<li>%Make%</li>
+<li>%Model%</li>
+<li>%Orientation%</li>
+<li>%Resolution Unit%</li>
+<li>%Software%</li>
+<li>%Date and Time (Modified)%</li>
+<li>%Date and Time (Original)%</li>
+<li>%Date and Time (Digitized)%</li>
+<li>%White Point%</li>
+<li>%Exposure%</li>
+<li>%Aperture%</li>
+<li>%Exposure Program%</li>
+<li>%ISO Speed%</li>
+<li>%Exif Version%</li>
+<li>%Brightness Value%</li>
+<li>%Exposure Bias%</li>
+<li>%Max Aperture Value%</li>
+<li>%Metering Mode%</li>
+<li>%Light Source%</li>
+<li>%Flash%</li>
+<li>%Focal Length%</li>
+<li>%Focal Length (35mm format)%</li>
+<li>%Color Space%</li>
+<li>%Exposure Mode%</li>
+<li>%White Balance%</li>
+<li>%Scene Capture Type%</li>
+<li>%Contrast%</li>
+<li>%Saturation%</li>
+<li>%Sharpness%</li>
+<li>%Lens Info%</li>
+<li>%Lens Model%</li>
+<li>%Lens%</li>
+<li>%Gamma%</li>
+</ul><p>See more detail</p>
+
+<blockquote>
+<p><a href="http://www.flickr.com/services/api/explore/flickr.photos.getExif">http://www.flickr.com/services/api/explore/flickr.photos.getExif</a></p>
+</blockquote>
+
+<h3>Developer</h3>
+
+<p>Use provided script to compile and minify the script</p>
+
+<div class="highlight"><pre>./build.sh
+</pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/teruhisa">teruhisa</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
